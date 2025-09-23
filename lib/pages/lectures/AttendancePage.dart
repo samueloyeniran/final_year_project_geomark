@@ -26,6 +26,23 @@ class Attendancepage extends StatelessWidget {
             },
           ),
         ),
+        body: Container(
+          padding: EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 20),
+          child: Column(
+            children: [
+              Center(
+                child: Text(
+                  "Monitor Student's Attendance Here",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textPrimary,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

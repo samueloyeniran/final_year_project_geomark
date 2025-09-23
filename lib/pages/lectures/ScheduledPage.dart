@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/components/AppColor.dart';
+import 'package:geomark/pages/lectures/AttendancePage.dart';
+import 'package:geomark/pages/lectures/editPage.dart';
 
 class ScheduledPage extends StatefulWidget {
   const ScheduledPage({super.key});
@@ -220,7 +222,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                 children: [
                   Expanded(
                     child: DropdownButtonFormField<String>(
-                      value: selectedStatus,
+                      initialValue: selectedStatus,
                       hint: const Text("All Status"),
                       items: statusOptions
                           .map(
@@ -247,7 +249,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: DropdownButtonFormField<String>(
-                      value: selectedBuilding,
+                      initialValue: selectedBuilding,
                       hint: const Text("All Buildings"),
                       items: buildingOptions
                           .map(
@@ -283,7 +285,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                   padding: const EdgeInsets.only(bottom: 16),
                   child: _buildScheduleContainer(schedule, index),
                 );
-              }).toList(),
+              }),
 
               const SizedBox(height: 20),
 
@@ -369,6 +371,11 @@ class _ScheduledPageState extends State<ScheduledPage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text("Edit ${schedule["course"]}")),
                   );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Editpage()),
+                  );
+                  print("Navigated to Editpage");
                 },
               ),
               IconButton(
@@ -428,8 +435,12 @@ class _ScheduledPageState extends State<ScheduledPage> {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text("View Attendance"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Attendancepage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
@@ -437,6 +448,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                     borderRadius: BorderRadius.circular(6),
                   ),
                 ),
+                child: Text("View Attendance"),
               ),
             ],
           ),
