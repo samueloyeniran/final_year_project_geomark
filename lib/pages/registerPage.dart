@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/components/AppColor.dart';
 import 'package:geomark/components/MyBox.dart';
-import 'package:geomark/components/MyButton.dart';
+//import 'package:geomark/components/MyButton.dart';
 import 'package:geomark/components/box.dart';
 
 class Registerpage extends StatelessWidget {

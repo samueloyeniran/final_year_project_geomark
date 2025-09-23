@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geomark/components/AppColor.dart';
+//import 'package:geomark/components/AppColor.dart';
 import 'package:geomark/components/MyButton.dart';
 import 'package:geomark/components/myTextField.dart';
 import 'package:geomark/pages/SignInpage.dart';

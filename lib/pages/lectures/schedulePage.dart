@@ -125,7 +125,14 @@ class _SchedulepageState extends State<Schedulepage> {
               _buildDropdown(
                 label: "Course",
                 value: selectedCourse,
-                items: ["CS101", "MATH201", "PHY301"],
+                items: [
+                  "CS101",
+                  "MATH201",
+                  "PHY301",
+                  "ENG401",
+                  "BIO501",
+                  "CHEM601",
+                ],
                 onChanged: (val) => setState(() => selectedCourse = val),
               ),
 

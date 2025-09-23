@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/pages/lectures/Lecturers_homePage.dart';
-import 'package:geomark/splashscreen.dart';
+//import 'package:geomark/splashscreen.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
