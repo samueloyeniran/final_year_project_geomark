@@ -266,7 +266,7 @@ class _SchedulepageState extends State<Schedulepage> {
         Text(label, style: TextStyle(color: AppColors.textPrimary)),
         const SizedBox(height: 5),
         DropdownButtonFormField<String>(
-          value: value,
+          initialValue: value,
           items: items
               .map((e) => DropdownMenuItem(value: e, child: Text(e)))
               .toList(),

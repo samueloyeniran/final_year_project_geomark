@@ -3,6 +3,7 @@ import 'package:geomark/pages/lectures/Lecturers_homePage.dart';
 //import 'package:geomark/splashscreen.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geomark/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());

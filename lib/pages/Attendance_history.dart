@@ -148,7 +148,7 @@ class AttendanceHistory extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     DropdownButtonFormField<String>(
-                      value: selectedCourse,
+                      initialValue: selectedCourse,
                       hint: const Text("All Courses"),
                       decoration: InputDecoration(
                         filled: true,
@@ -200,7 +200,7 @@ class AttendanceHistory extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     DropdownButtonFormField<String>(
-                      value: selectedMonth,
+                      initialValue: selectedMonth,
                       hint: const Text("All Months"),
                       decoration: InputDecoration(
                         filled: true,
@@ -299,7 +299,7 @@ class AttendanceHistory extends StatelessWidget {
                               const Icon(Icons.calendar_today, size: 16),
                               const SizedBox(width: 6),
                               Text(
-                                "${_formatDate(record.date)}",
+                                _formatDate(record.date),
                                 style: const TextStyle(fontSize: 14),
                               ),
                               const SizedBox(width: 16),
