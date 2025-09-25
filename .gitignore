@@ -9,8 +9,17 @@
 .buildlog/
 .history
 .svn/
+.env
+.env.*
+!.env.example
 .swiftpm/
 migrate_working_dir/
+
+# API keys and secrets
+*.env
+secrets.json
+google-services.json
+GoogleService-Info.plist
 
 # IntelliJ related
 *.iml
