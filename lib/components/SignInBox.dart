@@ -5,9 +5,14 @@ import 'package:geomark/pages/homePage.dart';
 import 'package:geomark/pages/registerPage.dart';
 //import 'package:geomark/pages/registerPage.dart';
 
-class Signinbox extends StatelessWidget {
+class Signinbox extends StatefulWidget {
   const Signinbox({super.key});
 
+  @override
+  State<Signinbox> createState() => _SigninboxState();
+}
+
+class _SigninboxState extends State<Signinbox> {
   get emailController => null;
 
   get passwordController => null;
@@ -116,9 +121,7 @@ class Signinbox extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const Registerpage(),
-                    ),
+                    MaterialPageRoute(builder: (context) => Registerpage()),
                   );
                 },
                 child: Text(

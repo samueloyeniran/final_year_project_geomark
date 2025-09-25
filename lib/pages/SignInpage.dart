@@ -4,8 +4,9 @@ import 'package:geomark/components/SignInBox.dart';
 import 'package:geomark/components/box.dart';
 
 class Signinpage extends StatelessWidget {
-  const Signinpage({super.key});
-
+  Signinpage({super.key});
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

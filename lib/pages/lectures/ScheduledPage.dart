@@ -222,7 +222,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                 children: [
                   Expanded(
                     child: DropdownButtonFormField<String>(
-                      value: selectedStatus,
+                      initialValue: selectedStatus,
                       hint: const Text("All Status"),
                       items: statusOptions
                           .map(
@@ -249,7 +249,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: DropdownButtonFormField<String>(
-                      value: selectedBuilding,
+                      initialValue: selectedBuilding,
                       hint: const Text("All Buildings"),
                       items: buildingOptions
                           .map(
@@ -285,7 +285,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                   padding: const EdgeInsets.only(bottom: 16),
                   child: _buildScheduleContainer(schedule, index),
                 );
-              }).toList(),
+              }),
 
               const SizedBox(height: 20),
 
@@ -441,7 +441,6 @@ class _ScheduledPageState extends State<ScheduledPage> {
                     MaterialPageRoute(builder: (context) => Attendancepage()),
                   );
                 },
-                child: Text("View Attendance"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
@@ -449,6 +448,7 @@ class _ScheduledPageState extends State<ScheduledPage> {
                     borderRadius: BorderRadius.circular(6),
                   ),
                 ),
+                child: Text("View Attendance"),
               ),
             ],
           ),

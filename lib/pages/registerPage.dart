@@ -5,7 +5,12 @@ import 'package:geomark/components/MyBox.dart';
 import 'package:geomark/components/box.dart';
 
 class Registerpage extends StatelessWidget {
-  const Registerpage({super.key});
+  Registerpage({super.key});
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+
+  void Register(BuildContext context) async {}
 
   @override
   Widget build(BuildContext context) {

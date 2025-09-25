@@ -64,7 +64,7 @@ class Forgetpasswordbox extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Registerpage()),
+                  MaterialPageRoute(builder: (context) => Registerpage()),
                 );
               },
               style: TextButton.styleFrom(
@@ -94,7 +94,7 @@ class Forgetpasswordbox extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Signinpage()),
+                    MaterialPageRoute(builder: (context) => Signinpage()),
                   );
                 },
                 child: Text(
