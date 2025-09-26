@@ -12,6 +12,13 @@ class Signinpage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            color: AppColors.appbariconcolor,
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
           title: Center(
             child: const Text("GEOMARK", style: TextStyle(color: Colors.white)),
           ),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:geomark/components/AppColor.dart';
 import 'package:geomark/components/MyButton.dart';
 import 'package:geomark/components/myTextField.dart';
-import 'package:geomark/pages/SignInpage.dart';
-import 'package:geomark/pages/homePage.dart';
+import 'package:go_router/go_router.dart';
 
 class Mybox extends StatelessWidget {
   Mybox({super.key});
@@ -29,7 +27,10 @@ class Mybox extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+          IconButton(
+            onPressed: () => context.pop(),
+            icon: Icon(Icons.arrow_back),
+          ),
           Center(
             child: Text(
               "Create Account",
@@ -72,11 +73,8 @@ class Mybox extends StatelessWidget {
           Mybutton(
             text: "Create Account",
             onPressed: () {
-              // Handle create account logic here
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Homepage()),
-              );
+              // TODO: Add registration logic here
+              context.go('/homepage');
             },
           ),
           SizedBox(height: 15),
@@ -86,12 +84,7 @@ class Mybox extends StatelessWidget {
               children: [
                 Text("already have an account?"),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Signinpage()),
-                    );
-                  },
+                  onTap: () => context.go('/signinpage'),
                   child: Text(
                     " Sign in",
                     style: TextStyle(

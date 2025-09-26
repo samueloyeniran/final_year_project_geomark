@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/components/myTextField.dart';
-import 'package:geomark/pages/forgettenPasswordPage.dart';
-import 'package:geomark/pages/homePage.dart';
+import 'package:go_router/go_router.dart';
 import 'package:geomark/pages/registerPage.dart';
-//import 'package:geomark/pages/registerPage.dart';
 
 class Signinbox extends StatefulWidget {
   const Signinbox({super.key});
@@ -64,14 +62,7 @@ class _SigninboxState extends State<Signinbox> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Forgettenpasswordpage(),
-                    ),
-                  );
-                },
+                onTap: () => context.go('/forgot-password'),
                 child: Text(
                   "Forgot Your Password",
                   style: TextStyle(color: const Color.fromARGB(255, 3, 31, 54)),
@@ -95,15 +86,17 @@ class _SigninboxState extends State<Signinbox> {
               ),
               child: GestureDetector(
                 onTap: () {
-                  // Handle sign-in logic here
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Homepage()),
-                  );
+                  // TODO: Add authentication logic here
+                  context.go('/homepage');
                 },
-                child: Text(
-                  "Sign in",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                child: GestureDetector(
+                  onTap: () {
+                    context.go('/homepage');
+                  },
+                  child: Text(
+                    "Sign in",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
                 ),
               ),
             ),
@@ -118,12 +111,7 @@ class _SigninboxState extends State<Signinbox> {
               ),
               SizedBox(width: 8),
               GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Registerpage()),
-                  );
-                },
+                onTap: () => context.go('/registerpage'),
                 child: Text(
                   "sign up here",
                   style: TextStyle(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geomark/components/AppColor.dart';
 import 'package:geomark/components/MyButton.dart';
 import 'package:geomark/pages/SignInpage.dart';
+import 'package:go_router/go_router.dart';
 //import 'package:geomark/pages/registerPage.dart';
 
 class Splashscreen extends StatelessWidget {
@@ -61,10 +62,7 @@ class Splashscreen extends StatelessWidget {
               Mybutton(
                 text: "Get Started",
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Signinpage()),
-                  );
+                  context.go('/signinpage');
                 },
               ),
             ],

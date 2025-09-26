@@ -5,6 +5,7 @@ import 'package:geomark/pages/Attendance_history.dart';
 import 'package:geomark/pages/mobile_Scanner.dart';
 import 'package:intl/intl.dart'; // Add this for date & time formatting
 import 'package:geomark/components/AppColor.dart';
+import 'package:go_router/go_router.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -136,12 +137,7 @@ class Homepage extends StatelessWidget {
                       Mybutton(
                         text: "Attendance History",
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AttendanceHistory(),
-                            ),
-                          );
+                          context.go('/attendance-history');
                         },
                         icon: Icons.history,
                       ),
@@ -162,16 +158,11 @@ class Homepage extends StatelessWidget {
                     ],
                   ),
                 ),
-
+                SizedBox(height: 200),
                 Mybutton(
                   text: "Scan QR Code",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MobileScannerPage(),
-                      ),
-                    );
+                    context.go('/scanner');
                   },
                   icon: Icons.qr_code,
                   //backgroundColor: AppColors.primaryDark,
