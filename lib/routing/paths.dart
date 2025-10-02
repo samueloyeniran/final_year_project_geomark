@@ -1,4 +1,4 @@
-import 'package:geomark/splashscreen.dart';
+//import 'package:geomark/splashscreen.dart';
 
 class Path {
   const Path({required this.path, required this.name});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:geomark/pages/SignInpage.dart';
+import 'package:geomark/pages/Auth/SignInpage.dart';
 import 'package:geomark/pages/Attendance_history.dart';
-import 'package:geomark/pages/forgettenPasswordPage.dart';
+import 'package:geomark/pages/Auth/forgettenPasswordPage.dart';
 import 'package:geomark/pages/homePage.dart';
 import 'package:geomark/pages/mobile_Scanner.dart';
-import 'package:geomark/pages/registerPage.dart';
+import 'package:geomark/pages/Auth/registerPage.dart';
 import 'package:geomark/routing/paths.dart';
 import 'package:geomark/routing/routing_notifier.dart';
 import 'package:go_router/go_router.dart';
@@ -70,9 +70,9 @@ class AppRouting {
       ),
       GoRoute(
         path: '',
-        name: 'forgot-password',
+        name: 'attendance-history',
         builder: (BuildContext context, GoRouterState state) {
-          return const Forgettenpasswordpage();
+          return const AttendanceHistory();
         },
       ),
     ],

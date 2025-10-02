@@ -16,7 +16,7 @@ class Mybox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(right: 10, left: 10),
+      padding: EdgeInsets.only(right: 10, left: 10, bottom: 8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -74,7 +74,7 @@ class Mybox extends StatelessWidget {
             text: "Create Account",
             onPressed: () {
               // TODO: Add registration logic here
-              context.go('/homepage');
+              context.go('/homePage');
             },
           ),
           SizedBox(height: 15),

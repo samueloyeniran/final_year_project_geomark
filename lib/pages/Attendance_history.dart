@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/components/AppColor.dart';
+import 'package:geomark/pages/homePage.dart';
+import 'package:go_router/go_router.dart';
+//import 'package:go_router/go_router.dart';
 
 //  Attendance Model
 class AttendanceRecord {
@@ -100,7 +103,14 @@ class AttendanceHistory extends StatelessWidget {
           leading: IconButton(
             icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const Homepage();
+                  },
+                ),
+              );
             },
           ),
         ),

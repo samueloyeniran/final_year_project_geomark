@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:geomark/pages/SignInpage.dart';
-import 'package:geomark/pages/registerPage.dart';
-import 'package:geomark/splashscreen.dart';
+//import 'package:geomark/splashscreen.dart';
+import 'package:go_router/go_router.dart';
 //import 'package:geomark/splashscreen.dart';
 
 class Forgetpasswordbox extends StatelessWidget {
@@ -22,9 +21,7 @@ class Forgetpasswordbox extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pop(
-                MaterialPageRoute(builder: (context) => const Splashscreen()),
-              );
+              context.go('/signinpage');
             },
             icon: Icon(Icons.arrow_back),
           ),
@@ -62,10 +59,7 @@ class Forgetpasswordbox extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: TextButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Registerpage()),
-                );
+                return context.go('/signinpage');
               },
               style: TextButton.styleFrom(
                 backgroundColor: const Color(0xC0072474),
@@ -75,9 +69,14 @@ class Forgetpasswordbox extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text(
-                "Create Accoount",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              child: GestureDetector(
+                onTap: () {
+                  return context.go('/signinpage');
+                },
+                child: Text(
+                  "Confirm",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                ),
               ),
             ),
           ),
@@ -92,10 +91,7 @@ class Forgetpasswordbox extends StatelessWidget {
               SizedBox(width: 8),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Signinpage()),
-                  );
+                  return context.go('/signinpage');
                 },
                 child: Text(
                   "sign in here",

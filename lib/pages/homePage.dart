@@ -1,8 +1,8 @@
 //
 import 'package:flutter/material.dart';
 import 'package:geomark/components/MyButton.dart';
-import 'package:geomark/pages/Attendance_history.dart';
-import 'package:geomark/pages/mobile_Scanner.dart';
+//import 'package:geomark/pages/Attendance_history.dart';
+//import 'package:geomark/pages/mobile_Scanner.dart';
 import 'package:intl/intl.dart'; // Add this for date & time formatting
 import 'package:geomark/components/AppColor.dart';
 import 'package:go_router/go_router.dart';
@@ -137,7 +137,7 @@ class Homepage extends StatelessWidget {
                       Mybutton(
                         text: "Attendance History",
                         onPressed: () {
-                          context.go('/attendance-history');
+                          context.go('/attendancehistory');
                         },
                         icon: Icons.history,
                       ),
