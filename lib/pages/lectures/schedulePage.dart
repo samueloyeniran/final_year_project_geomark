@@ -89,9 +89,7 @@ class _SchedulepageState extends State<Schedulepage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => const LecturersHomepage(),
-                ),
+                MaterialPageRoute(builder: (context) => LecturersHomepage()),
               );
             },
             icon: const Icon(

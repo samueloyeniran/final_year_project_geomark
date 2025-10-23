@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geomark/components/myTextField.dart';
 import 'package:go_router/go_router.dart';
-import 'package:geomark/pages/Auth/registerPage.dart';
 
 class Signinbox extends StatefulWidget {
   const Signinbox({super.key});

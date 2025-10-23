@@ -13,7 +13,6 @@ import 'package:geomark/pages/lectures/Lecturers_homePage.dart';
 import 'package:geomark/splashscreen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   //WidgetsFlutterBinding.ensureInitialized();
@@ -65,7 +64,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Geomark',
           theme: ThemeData(primarySwatch: Colors.blue),
-          home: LecturersHomepage(),
+          home: MaterialApp.router(
+            routerConfig: _router,
+            debugShowCheckedModeBanner: false,
+          ),
         );
       },
     );
